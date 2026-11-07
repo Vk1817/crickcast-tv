@@ -1069,6 +1069,23 @@ var popupClosing = false;
 
     function getStreamItems(data) {
       if (!data) return [];
+      // Primary CRICKCAST id.json schema: { last_updated, updated, iframes: [...] }
+      // Use the iframes array directly so IDs/names are never inferred from URL fields.
+      if (data && Array.isArray(data.iframes)) {
+        return data.iframes.filter(function(item) {
+          return item && typeof item === 'object' && !Array.isArray(item) &&
+            item.id !== undefined && item.id !== null &&
+            typeof item.iframeSrc === 'string' && item.iframeSrc.trim() !== '';
+        }).map(function(item) {
+          return Object.assign({}, item, {
+            id: String(item.id),
+            name: String(item.name || item.id),
+            iframeSrc: item.iframeSrc
+          });
+        });
+      }
+
+      // Compatibility path for the backup feed and other legacy formats.
       var items = [];
       var seen = [];
       var idKeys = ['id','streamId','stream_id','matchId','match_id','channelId','channel_id','key'];
@@ -1097,7 +1114,6 @@ var popupClosing = false;
         addRecord(value,inheritedId);
         Object.keys(value).forEach(function(key){
           var child=value[key];
-          // Some feeds use the match ID as the object key and store a URL or record as its value.
           if (child && typeof child === 'object') walk(child, key, depth+1);
           else if (typeof child === 'string' && /^(https?:)?\/\//i.test(child.trim())) {
             addRecord({id:inheritedId!==undefined?inheritedId:key,iframeSrc:child,name:key},undefined);
@@ -1442,21 +1458,27 @@ var popupClosing = false;
     function loadDirectory(source){
       document.body.classList.add('directory-mode');
       var heading=document.getElementById('directoryHeading');
+      var sub=document.getElementById('directorySub');
+      var grid=document.getElementById('directoryGrid');
       if(heading)heading.textContent=source==='backup'?'Backup Channels':'All Channels';
+      if(sub)sub.textContent=source==='backup'?'Channels loaded from the backup JSON source.':'Channels loaded from the primary id.json source.';
+      if(grid)grid.innerHTML='<div class="directory-empty">Loading channels...</div>';
       var url=source==='backup'?BACKUP_DATA_SOURCE_URL:DATA_SOURCE_URL;
       fetchDataOnce(url).then(function(data){
-        var records=getStreamItems(data);
-        if(source==='primary' && !records.length){
-          return fetchDataOnce(BACKUP_DATA_SOURCE_URL).then(function(backup){
-            var backupRecords=getStreamItems(backup);
-            renderDirectory(backupRecords,'primary');
-            var note=document.getElementById('directorySub');
-            if(note)note.textContent=backupRecords.length?'Primary JSON had no recognizable channel records; showing backup data instead.':'No channel records were recognized in either JSON source.';
-          });
+        if(!data) {
+          if(grid)grid.innerHTML='<div class="directory-empty">Could not read this JSON source. Check that the URL returns valid JSON.</div>';
+          var count=document.getElementById('directoryCount'); if(count)count.textContent='0 channels';
+          return;
         }
+        var records=getStreamItems(data);
         renderDirectory(records,source);
-        if(!records.length){var grid=document.getElementById('directoryGrid');if(grid)grid.innerHTML='<div class="directory-empty">JSON loaded, but no channel records with a match ID and stream URL were recognized. Check the JSON field names.</div>';}
-      }).catch(function(){var grid=document.getElementById('directoryGrid');if(grid)grid.innerHTML='<div class="directory-empty">Could not load this channel list. Please check the JSON URL and try again.</div>';});
+        if(!records.length && grid) {
+          grid.innerHTML='<div class="directory-empty">JSON loaded, but no valid channel records were found. Expected id, name and iframeSrc fields in the iframes array.</div>';
+        }
+      }).catch(function(){
+        if(grid)grid.innerHTML='<div class="directory-empty">Could not load this channel list. Please check the JSON URL and try again.</div>';
+        var count=document.getElementById('directoryCount'); if(count)count.textContent='0 channels';
+      });
     }
 
     window.addEventListener('hashchange', function(){
