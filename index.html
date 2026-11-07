@@ -25,6 +25,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://crickcast-tv.pages.dev">
+  <link rel="dns-prefetch" href="https://crickcast-tv.pages.dev">
   <link rel="preconnect" href="https://sonujson-v7.pages.dev">
   <link rel="dns-prefetch" href="https://sonujson-v7.pages.dev">
 
@@ -800,7 +802,8 @@ body::before{
     var JOIN_LINK       = 'https://t.me/crickcast18';
     var POPUP_JOIN_LINK = 'https://t.me/crickcast18';
     var WHATSAPP_CHANNEL_LINK = 'https://whatsapp.com/channel/0029Vb8SLviJENxuAOK4qx1U';
-    var DATA_SOURCE_URL = 'https://sonujson-v7.pages.dev/loura.json';
+    var DATA_SOURCE_URL = 'https://crickcast-tv.pages.dev/id.json';
+    var BACKUP_DATA_SOURCE_URL = 'https://sonujson-v7.pages.dev/loura.json';
 
     var JOIN_SCHEMES = [
       { bg: 'linear-gradient(135deg,#43a047,#2e7d32)', color: '#fff',    shadow: 'rgba(67,160,71,.40)' },
@@ -913,17 +916,26 @@ body::before{
       });
     }
 
-    function fetchDataOnce() {
-      return fetch(DATA_SOURCE_URL, { cache: 'no-store' })
+    function fetchDataOnce(url) {
+      return fetch(url, { cache: 'no-store' })
         .then(function (r) { return r.ok ? r.json() : null; })
         .catch(function () { return null; });
     }
 
     function prefetchData() {
       if (dataPromise) return dataPromise;
-      dataPromise = fetchDataOnce().then(function (d) {
-        if (d) return d;
-        return new Promise(function (res) { setTimeout(res, 800); }).then(fetchDataOnce);
+      // Try the new primary JSON first; use the previous JSON only if it fails.
+      dataPromise = fetchDataOnce(DATA_SOURCE_URL).then(function (primaryData) {
+        if (primaryData) return primaryData;
+        return fetchDataOnce(BACKUP_DATA_SOURCE_URL);
+      }).then(function (data) {
+        if (data) return data;
+        // Retry the primary once, then make a final attempt with the backup.
+        return new Promise(function (resolve) { setTimeout(resolve, 800); })
+          .then(function () { return fetchDataOnce(DATA_SOURCE_URL); })
+          .then(function (retryData) {
+            return retryData || fetchDataOnce(BACKUP_DATA_SOURCE_URL);
+          });
       });
       return dataPromise;
     }
