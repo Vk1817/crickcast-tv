@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cricket News Point – Free HD Live Cricket Streaming</title>
+
+  <meta name="description" content="Watch free HD live cricket streaming on Cricket News Point. IPL, T20 World Cup, FIFA World Cup and live cricket scores.">
+  <meta name="keywords" content="Cricket News Point, Cricket Club, live cricket streaming, IPL live, T20 World Cup, FIFA World Cup, live cricket scores">
+  <meta name="author" content="You">
+  <meta name="robots" content="index,follow,max-snippet:-1">
+  <meta name="theme-color" content="#0a1024">
+  <link rel="canonical" href="https://india-vs-nz.pages.dev/">
+
+  <meta property="og:site_name" content="Cricket News Point">
+  <meta property="og:title" content="Cricket News Point – Free HD Live Cricket Streaming">
+  <meta property="og:description" content="Watch free HD live cricket streaming on Cricket News Point. IPL, T20 World Cup and live scores.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cricket-club.pages.dev/">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cricket News Point – Free HD Live Cricket Streaming">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://sonujson-v7.pages.dev">
+  <link rel="dns-prefetch" href="https://sonujson-v7.pages.dev">
+
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alata&family=Amaranth:wght@400;700&display=swap" rel="stylesheet">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSW772KQX6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-BSW772KQX6');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Cricket News Point",
+    "alternateName": ["Cricket Club", "CNP"],
+    "url": "https://india-vs-nz.pages.dev/",
+    "author": { "@type": "Person", "name": "You" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Cricket News Point",
+    "alternateName": ["Cricket Club", "CNP"],
+    "url": "https://india-vs-nz.pages.dev/",
+    "founder": { "@type": "Person", "name": "You" }
+  }
+  </script>
+
+  <style>
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Buttons do NOT inherit the page font by default (browsers use the system UI font),
+       while <a> links do. This makes every control use the site font. */
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+      color: inherit;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: #0a1024;
+      font-family: 'Alata', sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      padding-bottom: max(10px, env(safe-area-inset-bottom));
+      min-height: 100vh;
+      min-height: 100dvh;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      animation: fadeUp .48s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px) }
+      to   { opacity: 1; transform: translateY(0) }
+    }
+
+    .card {
+      background: linear-gradient(135deg, #0d6efd, #0a58ca);
+      border-radius: 15px;
+      padding: 15px 18px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 8px 22px rgba(13, 110, 253, .22);
+      position: relative;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header {
+      font-size: 21px;
+      font-weight: 700;
+      font-family: 'Acme', sans-serif;
+      letter-spacing: .2px;
+      flex: 1;
+      text-align: center;
+      word-break: break-word;
+      /* keep long titles clear of the bell button (40px + gap) */
+      padding: 0 48px;
+    }
+
+    .bell-container {
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 0, 0, .4);
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, .8);
+      -webkit-user-select: none;
+      user-select: none;
+      transition: transform .25s;
+    }
+
+    .bell-container:hover  { transform: scale(1.1) }
+    .bell-container:active { transform: scale(.88) }
+
+    .bell-svg {
+      width: 19px;
+      height: 19px;
+      fill: #ffd700;
+      transform-origin: top center;
+    }
+
+    .bell-svg.ringing { animation: bellRing .65s ease forwards }
+
+    @keyframes bellRing {
+      0%   { transform: rotate(0) }
+      10%  { transform: rotate(22deg) }
+      20%  { transform: rotate(-20deg) }
+      30%  { transform: rotate(16deg) }
+      40%  { transform: rotate(-12deg) }
+      50%  { transform: rotate(8deg) }
+      60%  { transform: rotate(-5deg) }
+      75%  { transform: rotate(3deg) }
+      100% { transform: rotate(0) }
+    }
+
+    .video-wrapper {
+      background: #000;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      padding-top: 56.25%;
+      box-shadow: 0 0 0 3px #0d6efd;
+    }
+
+    @media (max-width: 480px) {
+      .video-wrapper { padding-top: 80% }
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .error-box {
+      display: none;
+      background: linear-gradient(135deg, #ff4d4d, #cc0000);
+      color: #fff;
+      padding: 22px;
+      border-radius: 13px;
+      font-weight: 600;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 18px 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .06);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+    }
+
+    .join-card {
+      border-left: 4px solid #43a047;
+      border-right: 4px solid #43a047;
+    }
+
+    .share-card {
+      border-left: 4px solid #0d6efd;
+      border-right: 4px solid #0d6efd;
+    }
+
+    .action-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+    }
+
+    .action-title span {
+      font-weight: 500;
+      color: #64748b;
+      font-size: .83rem;
+    }
+
+    .action-button {
+      font-family: inherit;
+      line-height: 1.25;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-appearance: none;
+      appearance: none;
+      touch-action: manipulation;
+      transition: transform .22s, box-shadow .22s;
+      background: linear-gradient(135deg, #43a047, #2e7d32);
+      color: #fff;
+    }
+
+    .action-button:active { transform: scale(.97) }
+
+    .join-banner {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1792 / 592;
+      border-radius: 12px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0b1730, #1a2b50);
+      border: 1px solid rgba(0, 0, 0, .08);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .join-banner img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25d366, #128c7e) !important;
+      color: #fff !important;
+    }
+
+    .btn-telegram {
+      background: linear-gradient(135deg, #2AABEE, #1E88C7) !important;
+      color: #fff !important;
+    }
+
+    .popup-join-frame {
+      width: 100%;
+      height: 46px;
+      border: 0;
+      outline: 0;
+      display: block;
+      overflow: hidden;
+      background: transparent;
+      margin-bottom: 9px;
+    }
+
+    .btn-share-style {
+      background: linear-gradient(135deg, #0d6efd, #0a58ca) !important;
+      color: #fff !important;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .92);
+      display: flex;
+      padding: 12px;
+      z-index: 99999;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .popup-box {
+      width: 100%;
+      max-width: 340px;
+      margin: auto;
+      background: #1C1D22;
+      border: 2px solid #00BFFF;
+      border-radius: 24px;
+      padding: 29px 20px 20px;
+      text-align: center;
+      position: relative;
+      box-shadow:
+        0 0 12px rgba(0, 191, 255, .34),
+        0 0 32px rgba(0, 191, 255, .14),
+        inset 0 0 10px rgba(0, 191, 255, .10),
+        inset 0 0 0 1px rgba(120, 215, 255, .10),
+        0 24px 60px rgba(0, 0, 0, .6);
+      animation: popIn .5s cubic-bezier(.175, .885, .32, 1.275) both;
+    }
+
+    @keyframes popIn {
+      0%   { opacity: 0; transform: scale(.8) translateY(30px) }
+      60%  { opacity: 1; transform: scale(1.03) translateY(-4px) }
+      100% { opacity: 1; transform: scale(1) translateY(0) }
+    }
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      border: 1.5px solid rgba(255, 204, 0, .5);
+      border-radius: 50%;
+      background: rgba(255, 204, 0, .12);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-appearance: none;
+      appearance: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      transition: background .18s, border-color .18s, transform .18s;
+    }
+
+    .popup-close::after {
+      content: '';
+      position: absolute;
+      top: -7px;
+      right: -7px;
+      bottom: -7px;
+      left: -7px;
+    }
+
+    .popup-close:hover {
+      background: rgba(255, 204, 0, .22);
+      border-color: rgba(255, 204, 0, .8);
+    }
+
+    .popup-close:active { transform: scale(.9) }
+
+    .popup-close:focus-visible {
+      outline: 2px solid #ffcc00;
+      outline-offset: 2px;
+    }
+
+    .popup-close svg {
+      display: block;
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+      pointer-events: none;
+    }
+
+    .popup-title {
+      color: #ffcc00;
+      font-family: 'Acme', sans-serif;
+      font-size: clamp(21px, 6.4vw, 27px);
+      margin-bottom: 9px;
+    }
+
+    .popup-text {
+      color: #a0a0a8;
+      font-size: clamp(12.5px, 3.8vw, 14px);
+      line-height: 1.58;
+      margin-bottom: 20px;
+    }
+
+    .popup-text b {
+      color: #fff;
+      font-family: 'Amaranth', sans-serif;
+      font-size: clamp(15px, 4.6vw, 17px);
+      display: block;
+      margin-top: 6px;
+    }
+
+    .btn-popup {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 12px;
+      font-family: 'Amaranth', sans-serif;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      touch-action: manipulation;
+      transition: transform .18s;
+    }
+
+    .btn-popup:active { transform: scale(.95) }
+
+    .btn-join-main {
+      font-size: clamp(16px, 4.8vw, 18px);
+      font-weight: 700;
+      margin-bottom: 7px;
+      display: block;
+    }
+
+    .btn-joined-main {
+      background: transparent;
+      color: #7d808c;
+      font-size: 12px;
+      padding: 7px 14px;
+      width: auto;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 10px 10px 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeUp .5s ease .2s both;
+    }
+
+    .footer-divider {
+      width: 32px;
+      height: 1.5px;
+      background: rgba(255, 255, 255, .16);
+      border-radius: 1px;
+      margin-bottom: 8px;
+    }
+
+    .footer-made {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #8892a0;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .2px;
+      font-family: 'Alata', sans-serif;
+    }
+
+    .heart-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 360px) {
+      .header        { font-size: 18px }
+      .popup-box     { padding: 24px 16px 16px }
+      .action-button { padding: 13px; font-size: 13px }
+      .info-card     { padding: 15px 16px }
+    }
+
+    @media (min-width: 500px) {
+      body {
+        padding: 16px;
+        padding-bottom: max(16px, env(safe-area-inset-bottom));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+
+  <style id="crickcast-redesign">
+    :root { color-scheme: dark; --accent:#f5c542; --panel:#111b2e; --panel2:#17243b; --muted:#9fb0c8; }
+    body {
+      background: radial-gradient(ellipse at 50% -15%, #243d65 0%, #0b1425 48%, #070d18 100%) !important;
+      color:#f5f7fb !important; font-family:Arial,Helvetica,sans-serif !important;
+      min-height:100vh;
+    }
+    .container { width:min(100% - 28px, 920px) !important; margin:24px auto !important; gap:16px !important; }
+    .card,.info-card,.popup-box {
+      background:linear-gradient(145deg,rgba(22,35,57,.98),rgba(11,20,35,.98)) !important;
+      border:1px solid rgba(255,255,255,.09) !important; border-radius:18px !important;
+      box-shadow:0 16px 42px rgba(0,0,0,.28) !important;
+    }
+    .card { padding:18px 20px !important; }
+    .header { color:#fff !important; font-size:clamp(20px,4vw,29px) !important; letter-spacing:.5px !important; }
+    .live-indicator { display:flex; align-items:center; gap:7px; color:#ff6565; font-weight:800; font-size:12px; letter-spacing:1.2px; }
+    .live-dot { width:8px;height:8px;border-radius:50%;background:#ff4545;box-shadow:0 0 12px #ff4545; }
+    .video-wrapper { border:1px solid rgba(255,255,255,.13) !important; border-radius:18px !important; overflow:hidden; background:#000; box-shadow:0 18px 50px rgba(0,0,0,.4); }
+    .info-card { padding:18px !important; }
+    .action-title { color:#f7f9ff !important; font-size:16px !important; font-weight:800 !important; margin-bottom:14px !important; }
+    .join-banner { border:1px solid rgba(245,197,66,.4) !important; border-radius:14px !important; box-shadow:0 8px 24px rgba(0,0,0,.25); }
+    .action-button { border-radius:12px !important; min-height:48px !important; font-weight:800 !important; letter-spacing:.2px; box-shadow:0 7px 18px rgba(0,0,0,.22); }
+    .btn-telegram { background:linear-gradient(135deg,#2AABEE,#1676b8) !important; }
+    .btn-share-style { background:linear-gradient(135deg,#e6b52e,#c88a12) !important; color:#111827 !important; }
+    .popup-overlay { background:rgba(3,8,17,.88) !important; backdrop-filter:blur(8px); }
+    .popup-box { padding:24px !important; }
+    .popup-title { color:var(--accent) !important; }
+    .popup-text { color:#dce6f5 !important; }
+    footer { color:#9fb0c8 !important; }
+    @media(max-width:600px) {
+      .container { width:min(100% - 20px,920px) !important; margin:12px auto !important; gap:12px !important; }
+      .card,.info-card { padding:14px !important; }
+      .header-content { gap:10px !important; }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="popup-overlay" id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <div class="popup-box">
+      <button class="popup-close" id="popupClose" type="button" aria-label="Close Popup">
+        <svg viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <line x1="2.5" y1="2.5" x2="9.5" y2="9.5" stroke="#FFCC00" stroke-width="2" stroke-linecap="round"/>
+          <line x1="9.5" y1="2.5" x2="2.5" y2="9.5" stroke="#FFCC00" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="popup-title" id="popupTitle">Follow Us !!</div>
+      <div class="popup-text">
+         Join our WhatsApp channel
+        <b>CRICKET NEWS POINT</b>
+      </div>
+      <iframe id="joinFrame" class="popup-join-frame" title="Join" scrolling="no"></iframe>
+      <button class="btn-popup btn-joined-main" id="btnAlreadyJoined">No, Thanks</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <div class="header-content">
+        <div class="header" id="pageTitle">LOADING...</div>
+
+        <div class="live-indicator" aria-label="Live stream">
+          <svg class="bell-svg idle" viewBox="0 0 24 24" id="bellSvg" aria-hidden="true">
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="video-wrapper" id="videoWrapper">
+      <iframe id="videoFrame" allowfullscreen allow="autoplay;encrypted-media;picture-in-picture;fullscreen"
+        referrerpolicy="no-referrer-when-downgrade" scrolling="no" frameborder="0" loading="eager"></iframe>
+    </div>
+    <div id="errorBox" class="error-box" role="alert"></div>
+
+    <div class="info-card join-card">
+      <div class="action-title">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          style="color:#ffcc00;width:15px;height:15px;flex-shrink:0;" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        </svg>
+        <span>Follow us for Updates !!</span>
+      </div>
+
+      <a href="#" id="bannerLink" class="join-banner" target="_blank" rel="noopener noreferrer" aria-label="Join">
+        <img id="bannerImg" alt="" hidden>
+      </a>
+      <a href="#" id="tgButton" target="_blank" rel="noopener noreferrer" class="action-button btn-telegram">
+        <svg fill="currentColor" viewBox="0 0 448 512" style="width:20px;height:20px;flex-shrink:0;" aria-hidden="true">
+          <path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z" />
+        </svg>
+        <span>Join Telegram Channel</span>
+      </a>
+    </div>
+
+    <div class="info-card share-card">
+      <div class="action-title">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          style="color:#ffcc00;width:15px;height:15px;flex-shrink:0;" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+        </svg>
+        <span>Copy Link &amp; Share</span>
+      </div>
+
+      <button class="action-button btn-share-style" id="shareButton">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:18px;height:18px;flex-shrink:0;"
+          aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+        </svg>
+        <span>Click Here To Share This Page Link</span>
+      </button>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-divider"></div>
+      <div class="footer-made">
+        Made For You
+        <svg id="heartIcon" class="heart-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21s-7.5-4.6-10.1-9.1C.4 9.1 1.4 5.6 4.6 4.5c2-.7 4.1 0 5.4 1.8L12 8.4l2-2.1c1.3-1.8 3.4-2.5 5.4-1.8 3.2 1.1 4.2 4.6 2.7 7.4C19.5 16.4 12 21 12 21z" />
+        </svg>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    'use strict';
+
+    var SITE_NAME       = 'Cricket News Point';
+    var JOIN_LINK       = 'https://t.me/crickcast18';
+    var POPUP_JOIN_LINK = 'https://whatsapp.com/channel/0029Vb8SLviJENxuAOK4qx1U';
+    var BANNER_LINK     = 'https://Balaji99.life';
+    var BANNER_IMG_URL  = '/balaji99.jpg';
+    var WHATSAPP_LINK   = 'https://whatsapp.com/channel/0029Vb8SLviJENxuAOK4qx1U';
+    var DATA_SOURCE_URL = 'https://sonujson-v7.pages.dev/loura.json';
+
+    var JOIN_SCHEMES = [
+      { bg: 'linear-gradient(135deg,#43a047,#2e7d32)', color: '#fff',    shadow: 'rgba(67,160,71,.40)' },
+      { bg: 'linear-gradient(90deg,#1bcc26,#17b823)',  color: '#fff',    shadow: 'rgba(27,204,38,.38)' },
+      { bg: 'linear-gradient(90deg,#11f7e0,#0dcaba)',  color: '#003d36', shadow: 'rgba(17,247,224,.38)' },
+      { bg: 'linear-gradient(90deg,#ffd60a,#ffb703)',  color: '#3d2b00', shadow: 'rgba(255,190,10,.42)' },
+      { bg: 'linear-gradient(90deg,#ff5fa2,#ff2d78)',  color: '#fff',    shadow: 'rgba(255,93,162,.38)' },
+      { bg: 'linear-gradient(90deg,#8e5bff,#6a35ff)',  color: '#fff',    shadow: 'rgba(142,91,255,.38)' }
+    ];
+
+    var joinScheme = JOIN_SCHEMES[Math.floor(Math.random() * JOIN_SCHEMES.length)];
+
+    var HEART_COLORS = ['#ff4d6d', '#ff006e', '#f72585', '#ff8fa3', '#ffd60a', '#06d6a0', '#4cc9f0', '#9b5de5', '#ff9e00', '#ff5fa2'];
+
+    var dataPromise = null;
+
+    function fetchDataOnce() {
+      return fetch(DATA_SOURCE_URL, { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .catch(function () { return null; });
+    }
+
+    function prefetchData() {
+      if (dataPromise) return dataPromise;
+      dataPromise = fetchDataOnce().then(function (d) {
+        if (d) return d;
+        return new Promise(function (res) { setTimeout(res, 800); }).then(fetchDataOnce);
+      });
+      return dataPromise;
+    }
+
+    prefetchData();
+
+
+    window.addEventListener('pageshow', function (e) {
+      if (!e.persisted) return;
+      window.location.reload();
+    }, false);
+var popupClosing = false;
+
+    function openTab(url) {
+      if (!url) return;
+      var a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () { if (a.parentNode) a.parentNode.removeChild(a); }, 150);
+    }
+
+    function closePopup() {
+      var popup = document.getElementById('popup');
+      if (!popup || popupClosing || popup.style.display === 'none') return;
+      popupClosing = true;
+      popup.style.transition = 'opacity .2s';
+      popup.style.opacity = '0';
+      popup.style.pointerEvents = 'none';
+      popup.setAttribute('aria-hidden', 'true');
+      setTimeout(function () {
+        popup.style.display = 'none';
+        popupClosing = false;
+      }, 220);
+    }
+
+    function buildJoinFrame() {
+      var frame = document.getElementById('joinFrame');
+      if (!frame) return;
+      var html =
+        '<!DOCTYPE html><html><head><meta charset="UTF-8">' +
+        '<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">' +
+        '<link rel="preconnect" href="https://fonts.googleapis.com">' +
+        '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
+        '<link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap" rel="stylesheet">' +
+        '<style>' +
+        '*{margin:0;padding:0;box-sizing:border-box}' +
+        'html,body{width:100%;background:transparent;overflow:hidden;-webkit-tap-highlight-color:transparent}' +
+        'button{width:100%;padding:14px;border:none;border-radius:12px;font-family:"Amaranth",sans-serif;' +
+        'font-size:17px;font-weight:700;letter-spacing:.6px;line-height:1;text-align:center;cursor:pointer;' +
+        '-webkit-user-select:none;user-select:none;-webkit-appearance:none;appearance:none;touch-action:manipulation;' +
+        'display:block;transition:transform .18s;background:' + joinScheme.bg + ';box-shadow:0 5px 20px ' + joinScheme.shadow + ';color:' + joinScheme.color + '}' +
+        'button:active{transform:scale(.95)}' +
+        '</style></head><body>' +
+        '<button type="button" id="jb">JOIN NOW</button>' +
+        '<script>(function(){' +
+        'document.getElementById("jb").addEventListener("click",function(e){' +
+        'e.preventDefault();' +
+        'try{parent.postMessage({type:"joinNowClicked"},"*");}catch(e){}' +
+        '},false);' +
+        'function reportHeight(){try{parent.postMessage({type:"joinFrameHeight",height:document.body.scrollHeight},"*");}catch(e){}}' +
+        'window.addEventListener("load",function(){' +
+        'reportHeight();' +
+        'if(document.fonts&&document.fonts.ready){document.fonts.ready.then(reportHeight);}else{setTimeout(reportHeight,300);}' +
+        '});' +
+        'window.addEventListener("message",function(e){' +
+        'if(e&&e.data&&e.data.type==="measureNow")reportHeight();' +
+        '},false);' +
+        '})();<\/script>' +
+        '</body></html>';
+      frame.setAttribute('srcdoc', html);
+      setTimeout(function () {
+        try { frame.contentWindow.postMessage({ type: 'measureNow' }, '*'); } catch (e) {}
+      }, 300);
+    }
+
+    window.addEventListener('message', function (ev) {
+      var frame = document.getElementById('joinFrame');
+      if (!frame || ev.source !== frame.contentWindow) return;
+      var d = ev.data;
+      if (!d || typeof d !== 'object') return;
+      if (d.type === 'joinNowClicked') {
+        if (isMobileDevice()) {
+          window.location.href = POPUP_JOIN_LINK;
+        } else {
+          openTab(POPUP_JOIN_LINK);
+        }
+        closePopup();
+      } else if (d.type === 'joinFrameHeight' && typeof d.height === 'number' && d.height > 0) {
+        frame.style.height = Math.max(40, d.height) + 'px';
+      }
+    }, false);
+
+    function alreadyJoined() {
+      closePopup();
+    }
+
+    function applyRandomHeartColor() {
+      var heart = document.getElementById('heartIcon');
+      if (!heart) return;
+      heart.style.fill = HEART_COLORS[Math.floor(Math.random() * HEART_COLORS.length)];
+    }
+
+    function addShimmer() {
+      var wrapper = document.getElementById('videoWrapper');
+      if (!wrapper) return;
+
+      var shimmer = document.createElement('div');
+      shimmer.id = 'iframeShimmer';
+      shimmer.setAttribute('aria-hidden', 'true');
+      shimmer.style.cssText = [
+        'position:absolute', 'top:0', 'right:0', 'bottom:0', 'left:0', 'border-radius:inherit',
+        'background:linear-gradient(90deg,#101a2e 25%,#1e2c4a 50%,#101a2e 75%)',
+        'background-size:200% 100%', 'animation:shimmerSlide 1.4s linear infinite',
+        'z-index:2', 'pointer-events:none'
+      ].join(';');
+
+      if (!document.getElementById('shimmerStyle')) {
+        var st = document.createElement('style');
+        st.id = 'shimmerStyle';
+        st.textContent = '@keyframes shimmerSlide{0%{background-position:200% 0}100%{background-position:-200% 0}}';
+        document.head.appendChild(st);
+      }
+
+      wrapper.style.position = 'relative';
+      wrapper.insertBefore(shimmer, wrapper.firstChild);
+    }
+
+    function removeShimmer() {
+      var s = document.getElementById('iframeShimmer');
+      if (s && s.parentNode) s.parentNode.removeChild(s);
+    }
+
+    var currentStreamId = '';
+
+    function showError(title, message) {
+      var wrapper = document.getElementById('videoWrapper');
+      var titleEl = document.getElementById('pageTitle');
+      var errBox = document.getElementById('errorBox');
+      removeShimmer();
+      if (wrapper) wrapper.style.display = 'none';
+      if (errBox) {
+        errBox.textContent = message;
+        errBox.style.display = 'block';
+      }
+      if (titleEl) titleEl.textContent = title;
+    }
+
+    function isSafeFrameUrl(url) {
+      return typeof url === 'string' && url.trim() !== '' && !/^\s*(javascript|data|vbscript):/i.test(url);
+    }
+
+    function findStream(data, candidates) {
+      if (!data || !Array.isArray(data.iframes)) return null;
+
+      var index = {};
+      for (var i = 0; i < data.iframes.length; i++) {
+        var item = data.iframes[i];
+        if (!item || item.id === undefined || item.id === null) continue;
+        var key = 'k_' + String(item.id).trim().toLowerCase();
+        if (!Object.prototype.hasOwnProperty.call(index, key)) index[key] = item;
+      }
+
+      for (var j = 0; j < candidates.length; j++) {
+        var want = 'k_' + candidates[j].toLowerCase();
+        if (Object.prototype.hasOwnProperty.call(index, want)) return index[want];
+      }
+      return null;
+    }
+
+    function loadStream(candidates) {
+      var frame = document.getElementById('videoFrame');
+      var titleEl = document.getElementById('pageTitle');
+
+      if (!candidates.length) {
+        showError('NO STREAM SELECTED', 'No stream ID found in this link. Open the link exactly as shared.');
+        return;
+      }
+
+      addShimmer();
+
+      prefetchData().then(function (data) {
+        if (!data) {
+          showError('CONNECTION ERROR', 'Could not load the stream list. Check your internet connection and refresh the page.');
+          return;
+        }
+
+        var found = findStream(data, candidates);
+
+        if (found && isSafeFrameUrl(found.iframeSrc)) {
+          var streamName = String(found.name || '').trim() || 'Live Stream';
+          currentStreamId = String(found.id).trim();
+
+          frame.addEventListener('load', function onLoad() {
+            frame.removeEventListener('load', onLoad);
+            removeShimmer();
+          });
+
+          frame.addEventListener('error', function onErr() {
+            frame.removeEventListener('error', onErr);
+            removeShimmer();
+          });
+
+          setTimeout(removeShimmer, 12000);
+
+          frame.src = found.iframeSrc;
+          if (titleEl) titleEl.textContent = streamName;
+          document.title = streamName + ' \u2013 ' + SITE_NAME;
+        } else {
+          showError('STREAM NOT FOUND', 'Stream Not Found');
+        }
+      });
+    }
+
+
+      function safeDecode(v) {
+      try { return decodeURIComponent(String(v).replace(/\+/g, ' ')); }
+      catch (e) { return String(v); }
+    }
+
+    function collectIdCandidates(query) {
+      var named = [];
+      var bare = [];
+      var pairs = String(query || '').replace(/^[?#]+/, '').split('&');
+
+      for (var i = 0; i < pairs.length; i++) {
+        if (!pairs[i]) continue;
+
+        var eq = pairs[i].indexOf('=');
+        var key = safeDecode(eq === -1 ? pairs[i] : pairs[i].slice(0, eq)).trim().replace(/^\/+|\/+$/g, '');
+        var val = eq === -1 ? '' : safeDecode(pairs[i].slice(eq + 1)).trim();
+
+        if (!key) continue;
+
+        if (key.toLowerCase() === 'id') {
+          if (val) named.push(val);
+        } else if (!val) {
+          bare.push(key);
+        }
+      }
+
+      return named.concat(bare);
+    }
+
+    function resolveCandidates() {
+      var list = collectIdCandidates(window.location.search);
+      if (window.location.hash) list = list.concat(collectIdCandidates(window.location.hash));
+
+      var seen = {};
+      var out = [];
+      for (var i = 0; i < list.length && out.length < 12; i++) {
+        var id = list[i].slice(0, 100);
+        var k = id.toLowerCase();
+        if (!id || seen['k_' + k]) continue;
+        seen['k_' + k] = true;
+        out.push(id);
+      }
+      return out;
+    }
+
+    function buildShareUrl() {
+      if (!currentStreamId) return window.location.href;
+      return window.location.protocol + '//' + window.location.host + window.location.pathname +
+             '?' + encodeURIComponent(currentStreamId);
+    }
+
+
+    function initBell() {
+      var btn = document.getElementById('bellBtn');
+      var svg = document.getElementById('bellSvg');
+      if (!btn || !svg) return;
+
+      function ring() {
+        svg.classList.remove('idle', 'ringing');
+        void svg.offsetWidth;
+        svg.classList.add('ringing');
+        setTimeout(function () {
+          svg.classList.remove('ringing');
+          svg.classList.add('idle');
+        }, 700);
+      }
+
+      function activate() {
+        ring();
+      }
+
+      btn.addEventListener('click', activate);
+      btn.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          activate();
+        }
+      });
+    }
+
+    function copyLink(url) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url)
+          .then(function () { showToast('Link Copied to Clipboard !!'); })
+          .catch(function () { fallbackCopy(url); });
+      } else {
+        fallbackCopy(url);
+      }
+    }
+
+    function initShareButton() {
+      var btn = document.getElementById('shareButton');
+      if (!btn) return;
+
+      btn.addEventListener('click', function () {
+        var url = buildShareUrl();
+        var title = document.title;
+        var text = title + '\n\nFrom ' + SITE_NAME + '\n\nWatch Live Cricket Streaming Free in HD !!';
+
+        if (navigator.share) {
+          navigator.share({ title: title, text: text, url: url }).catch(function (err) {
+            // Cancelled by the user: do nothing. Any other failure: copy the link instead.
+            if (err && err.name === 'AbortError') return;
+            copyLink(url);
+          });
+          return;
+        }
+
+        copyLink(url);
+      });
+    }
+
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0;font-size:16px;';
+      document.body.appendChild(ta);
+      ta.focus();
+      ta.select();
+      try { ta.setSelectionRange(0, text.length); } catch (e) {}
+      try {
+        document.execCommand('copy');
+        showToast('Link Copied to Clipboard !!');
+      } catch (e) {
+        alert('Link: ' + text);
+      }
+      document.body.removeChild(ta);
+    }
+
+    function showToast(msg) {
+      var old = document.getElementById('cfcToast');
+      if (old && old.parentNode) old.parentNode.removeChild(old);
+
+      var toast = document.createElement('div');
+      toast.id = 'cfcToast';
+      toast.textContent = msg;
+      toast.style.cssText = [
+        'position:fixed',
+        'bottom:calc(20px + env(safe-area-inset-bottom,0px))',
+        'left:50%',
+        'transform:translateX(-50%) translateY(10px)',
+        'background:rgba(30,41,59,0.96)',
+        'color:#fff',
+        'padding:10px 20px',
+        'border-radius:24px',
+        'font-size:13px',
+        'font-family:inherit',
+        'font-weight:500',
+        'white-space:nowrap',
+        'z-index:9999',
+        'opacity:0',
+        'transition:opacity 0.3s,transform 0.3s',
+        'pointer-events:none'
+      ].join(';');
+
+      document.body.appendChild(toast);
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          toast.style.opacity = '1';
+          toast.style.transform = 'translateX(-50%) translateY(0)';
+        });
+      });
+
+      setTimeout(function () {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(10px)';
+        setTimeout(function () {
+          if (toast.parentNode) toast.parentNode.removeChild(toast);
+        }, 350);
+      }, 2400);
+    }
+
+    function initFullscreenHandler() {
+      function handleFsChange() {
+        var fsEl = document.fullscreenElement || document.webkitFullscreenElement ||
+                   document.mozFullScreenElement || document.msFullscreenElement;
+        var orientation = window.screen && screen.orientation;
+        if (!orientation) return;
+
+        try {
+          if (fsEl) {
+            // lock() returns undefined on some older browsers, so guard before .catch()
+            var p = orientation.lock && orientation.lock('landscape');
+            if (p && typeof p.catch === 'function') p.catch(function () {});
+          } else if (orientation.unlock) {
+            orientation.unlock();
+          }
+        } catch (e) {}
+      }
+
+      document.addEventListener('fullscreenchange', handleFsChange);
+      document.addEventListener('webkitfullscreenchange', handleFsChange);
+      document.addEventListener('mozfullscreenchange', handleFsChange);
+      document.addEventListener('MSFullscreenChange', handleFsChange);
+    }
+
+    function initJoinCard() {
+      var banner = document.getElementById('bannerLink');
+      var img = document.getElementById('bannerImg');
+      var tg = document.getElementById('tgButton');
+      if (banner) banner.setAttribute('href', BANNER_LINK);
+      
+      if (tg) tg.setAttribute('href', JOIN_LINK);
+      if (img && BANNER_IMG_URL) {
+        img.src = BANNER_IMG_URL;
+        img.hidden = false;
+      }
+    }
+
+    function initPopupButtons() {
+      var btnJoined = document.getElementById('btnAlreadyJoined');
+      if (btnJoined) btnJoined.addEventListener('click', alreadyJoined);
+
+      var btnClose = document.getElementById('popupClose');
+      if (btnClose) btnClose.addEventListener('click', closePopup);
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' || e.key === 'Esc') closePopup();
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      initPopupButtons();
+
+      buildJoinFrame();
+      initJoinCard();
+      initBell();
+      initShareButton();
+      initFullscreenHandler();
+      applyRandomHeartColor();
+      loadStream(resolveCandidates());
+    });
+  </script>
+</body>
+
+</html>
