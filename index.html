@@ -526,6 +526,32 @@
 @keyframes tileShine{to{transform:translateX(120%)}}
 @media(prefers-reduced-motion:reduce){.bubble{animation:none!important;display:none}.channel-tile::after{animation:none!important}}
 
+
+    /* Channel directory views: /#all and /#backup-channels */
+    .directory-view{display:none;width:100%;max-width:1200px;margin:0 auto;padding:24px 18px 42px;position:relative;z-index:3;color:#f4f8ff}
+    body.directory-mode{display:block;background:radial-gradient(ellipse at 50% 0%,#10294a 0%,#081326 48%,#050b16 100%);padding:0}
+    body.directory-mode .container{display:none}
+    body.directory-mode .directory-view{display:block;animation:directoryIn .45s ease both}
+    @keyframes directoryIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+    .directory-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+    .directory-brand{font:800 clamp(24px,4vw,34px) 'Alata',sans-serif;letter-spacing:2px;color:#fff}
+    .directory-brand span{color:#20d6a0}
+    .directory-count{color:#9db3cf;font-size:14px}
+    .directory-heading{font-size:clamp(22px,4vw,30px);font-weight:800;margin:10px 0 5px}
+    .directory-sub{color:#9db3cf;margin-bottom:22px;font-size:14px}
+    .directory-search{width:100%;padding:14px 16px;border:1px solid rgba(133,174,220,.22);border-radius:13px;background:rgba(255,255,255,.06);color:#fff;outline:none;font:inherit;margin-bottom:18px}
+    .directory-search:focus{border-color:#20d6a0;box-shadow:0 0 0 3px rgba(32,214,160,.12)}
+    .directory-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+    .directory-card{display:flex;flex-direction:column;min-height:168px;overflow:hidden;text-decoration:none;color:#f4f8ff;border:1px solid rgba(125,169,215,.16);border-radius:17px;background:linear-gradient(145deg,rgba(21,43,66,.96),rgba(8,19,34,.98));box-shadow:0 10px 28px rgba(0,0,0,.2);transition:transform .22s,border-color .22s,box-shadow .22s;animation:directoryIn .45s ease both}
+    .directory-card:hover{transform:translateY(-5px);border-color:rgba(32,214,160,.55);box-shadow:0 14px 34px rgba(0,0,0,.34),0 0 24px rgba(32,214,160,.08)}
+    .directory-card-art{height:96px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,rgba(32,214,160,.18),transparent 58%),linear-gradient(135deg,#0c1b2b,#08111d);color:#20d6a0;font-size:32px;font-weight:900;letter-spacing:2px}
+    .directory-card-body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:7px}
+    .directory-name{font-size:16px;font-weight:700;line-height:1.3;overflow-wrap:anywhere}
+    .directory-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#9db3cf;font-size:12px}
+    .directory-id{color:#20d6a0;font-weight:700;letter-spacing:.3px}
+    .directory-empty{grid-column:1/-1;text-align:center;padding:35px 15px;color:#9db3cf;border:1px dashed rgba(157,179,207,.25);border-radius:15px}
+    @media(max-width:520px){.directory-view{padding:20px 12px 32px}.directory-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.directory-card{min-height:150px}.directory-card-art{height:82px}.directory-name{font-size:14px}.directory-card-body{padding:11px}}
+
 </style>
 
   <style id="crickcast-redesign">
@@ -723,6 +749,14 @@ body::before{
       <button class="btn-popup btn-joined-main" id="btnAlreadyJoined">No, Thanks</button>
     </div>
   </div>
+
+  <main class="directory-view" id="directoryView" aria-live="polite">
+    <div class="directory-top"><div class="directory-brand">CRICK<span>CAST</span></div><div class="directory-count" id="directoryCount">Loading channels…</div></div>
+    <h1 class="directory-heading" id="directoryHeading">All Channels</h1>
+    <p class="directory-sub" id="directorySub">Browse available channels and open a stream.</p>
+    <input class="directory-search" id="directorySearch" type="search" placeholder="🔎 Search channels or match ID…" autocomplete="off">
+    <div class="directory-grid" id="directoryGrid"><div class="directory-empty">Loading channel list…</div></div>
+  </main>
 
   <div class="container">
 
@@ -1033,68 +1067,106 @@ var popupClosing = false;
       return typeof url === 'string' && url.trim() !== '' && !/^\s*(javascript|data|vbscript):/i.test(url);
     }
 
-    function findStream(data, candidates) {
-      if (!data || !Array.isArray(data.iframes)) return null;
+    function getStreamItems(data) {
+      if (!data) return [];
+      if (Array.isArray(data.iframes)) return data.iframes;
+      if (data.data && Array.isArray(data.data.iframes)) return data.data.iframes;
+      if (data.streams && Array.isArray(data.streams)) return data.streams;
+      if (data.data && Array.isArray(data.data)) return data.data;
+      if (Array.isArray(data)) return data;
 
+      // Also support JSON files that wrap stream records inside nested objects.
+      var items = [];
+      var visited = [];
+      function walk(value) {
+        if (!value || typeof value !== 'object' || visited.indexOf(value) !== -1) return;
+        visited.push(value);
+        if (Array.isArray(value)) {
+          value.forEach(walk);
+          return;
+        }
+        var hasId = value.id !== undefined || value.streamId !== undefined || value.stream_id !== undefined;
+        var hasUrl = value.iframeSrc || value.iframe || value.src || value.url || value.link;
+        if (hasId && hasUrl) items.push(value);
+        Object.keys(value).forEach(function (key) { walk(value[key]); });
+      }
+      walk(data);
+      return items;
+    }
+
+    function findStream(data, candidates) {
+      var items = getStreamItems(data);
+      if (!items.length) return null;
       var index = {};
-      for (var i = 0; i < data.iframes.length; i++) {
-        var item = data.iframes[i];
-        if (!item || item.id === undefined || item.id === null) continue;
-        var key = 'k_' + String(item.id).trim().toLowerCase();
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        if (!item) continue;
+        var rawId = item.id !== undefined ? item.id : (item.streamId !== undefined ? item.streamId : item.stream_id);
+        if (rawId === undefined || rawId === null) continue;
+        var key = 'k_' + String(rawId).trim().toLowerCase();
         if (!Object.prototype.hasOwnProperty.call(index, key)) index[key] = item;
       }
-
       for (var j = 0; j < candidates.length; j++) {
-        var want = 'k_' + candidates[j].toLowerCase();
+        var want = 'k_' + String(candidates[j]).trim().toLowerCase();
         if (Object.prototype.hasOwnProperty.call(index, want)) return index[want];
       }
       return null;
     }
 
+    function getStreamFrameUrl(item) {
+      if (!item) return '';
+      return item.iframeSrc || item.iframe || item.src || item.url || item.link || '';
+    }
+
     function loadStream(candidates) {
       var frame = document.getElementById('videoFrame');
       var titleEl = document.getElementById('pageTitle');
-
       if (!candidates.length) {
         showError('NO STREAM SELECTED', 'No stream ID found in this link. Open the link exactly as shared.');
         return;
       }
-
       addShimmer();
 
-      prefetchData().then(function (data) {
-        if (!data) {
-          showError('CONNECTION ERROR', 'Could not load the stream list. Check your internet connection and refresh the page.');
+      // A successful JSON response is not enough: the requested stream ID must exist.
+      // If it is missing from the primary source, check the backup source as well.
+      fetchDataOnce(DATA_SOURCE_URL).then(function (primaryData) {
+        var primaryMatch = findStream(primaryData, candidates);
+        if (primaryMatch && isSafeFrameUrl(getStreamFrameUrl(primaryMatch))) {
+          return { item: primaryMatch, source: 'primary' };
+        }
+        return fetchDataOnce(BACKUP_DATA_SOURCE_URL).then(function (backupData) {
+          var backupMatch = findStream(backupData, candidates);
+          if (backupMatch && isSafeFrameUrl(getStreamFrameUrl(backupMatch))) {
+            return { item: backupMatch, source: 'backup' };
+          }
+          return null;
+        });
+      }).then(function (result) {
+        if (!result) {
+          showError('STREAM NOT FOUND', 'This stream ID was not found in the primary or backup JSON. Check the stream ID and JSON records.');
           return;
         }
-
-        var found = findStream(data, candidates);
-
-        if (found && isSafeFrameUrl(found.iframeSrc)) {
-          var streamName = String(found.name || '').trim() || 'Live Stream';
-          currentStreamId = String(found.id).trim();
-
-          frame.addEventListener('load', function onLoad() {
-            frame.removeEventListener('load', onLoad);
-            removeShimmer();
-          });
-
-          frame.addEventListener('error', function onErr() {
-            frame.removeEventListener('error', onErr);
-            removeShimmer();
-          });
-
-          setTimeout(removeShimmer, 12000);
-
-          frame.src = found.iframeSrc;
-          if (titleEl) titleEl.textContent = streamName;
-          document.title = streamName + ' \u2013 ' + SITE_NAME;
-        } else {
-          showError('STREAM NOT FOUND', 'Stream Not Found');
-        }
+        var found = result.item;
+        var frameUrl = getStreamFrameUrl(found);
+        var streamName = String(found.name || found.title || '').trim() || 'Live Stream';
+        var rawId = found.id !== undefined ? found.id : (found.streamId !== undefined ? found.streamId : found.stream_id);
+        currentStreamId = String(rawId).trim();
+        frame.addEventListener('load', function onLoad() {
+          frame.removeEventListener('load', onLoad);
+          removeShimmer();
+        });
+        frame.addEventListener('error', function onErr() {
+          frame.removeEventListener('error', onErr);
+          removeShimmer();
+        });
+        setTimeout(removeShimmer, 12000);
+        frame.src = frameUrl;
+        if (titleEl) titleEl.textContent = streamName;
+        document.title = streamName + ' – ' + SITE_NAME;
+      }).catch(function () {
+        showError('CONNECTION ERROR', 'Could not load either stream list. Check your internet connection and refresh the page.');
       });
     }
-
 
       function safeDecode(v) {
       try { return decodeURIComponent(String(v).replace(/\+/g, ' ')); }
@@ -1312,6 +1384,62 @@ var popupClosing = false;
       });
     }
 
+    function directoryMode(){
+      var hash=String(window.location.hash||'').toLowerCase();
+      return hash==='#all' ? 'primary' : (hash==='#backup-channels' ? 'backup' : '');
+    }
+
+    function renderDirectory(items, source){
+      var grid=document.getElementById('directoryGrid');
+      var count=document.getElementById('directoryCount');
+      var search=document.getElementById('directorySearch');
+      var heading=document.getElementById('directoryHeading');
+      var sub=document.getElementById('directorySub');
+      if(!grid)return;
+      heading.textContent=source==='backup'?'Backup Channels':'All Channels';
+      sub.textContent=source==='backup'?'Channels loaded from the backup JSON source.':'Channels loaded from the primary JSON source.';
+      var rows=items.map(function(item){
+        var id=item.id!==undefined?item.id:(item.streamId!==undefined?item.streamId:item.stream_id);
+        var url=getStreamFrameUrl(item);
+        if(id===undefined||id===null)return null;
+        return {id:String(id),name:String(item.name||item.title||item.channelName||('Channel '+id)),url:url};
+      }).filter(Boolean);
+      count.textContent=rows.length+' channels';
+      function draw(term){
+        term=String(term||'').trim().toLowerCase();
+        var filtered=rows.filter(function(r){return r.name.toLowerCase().indexOf(term)>=0||r.id.toLowerCase().indexOf(term)>=0;});
+        grid.innerHTML='';
+        if(!filtered.length){grid.innerHTML='<div class="directory-empty">No matching channels found.</div>';return;}
+        filtered.forEach(function(r,i){
+          var a=document.createElement('a');a.className='directory-card';a.href=window.location.pathname+'?id='+encodeURIComponent(r.id);a.style.animationDelay=Math.min(i*25,300)+'ms';
+          var art=document.createElement('div');art.className='directory-card-art';art.textContent='▶';
+          var body=document.createElement('div');body.className='directory-card-body';
+          var name=document.createElement('div');name.className='directory-name';name.textContent=r.name;
+          var meta=document.createElement('div');meta.className='directory-meta';
+          var label=document.createElement('span');label.textContent='MATCH ID';
+          var id=document.createElement('span');id.className='directory-id';id.textContent=r.id;
+          meta.appendChild(label);meta.appendChild(id);body.appendChild(name);body.appendChild(meta);a.appendChild(art);a.appendChild(body);grid.appendChild(a);
+        });
+      }
+      draw('');
+      if(search)search.oninput=function(){draw(search.value);};
+    }
+
+    function loadDirectory(source){
+      document.body.classList.add('directory-mode');
+      var heading=document.getElementById('directoryHeading');
+      if(heading)heading.textContent=source==='backup'?'Backup Channels':'All Channels';
+      var url=source==='backup'?BACKUP_DATA_SOURCE_URL:DATA_SOURCE_URL;
+      fetchDataOnce(url).then(function(data){renderDirectory(getStreamItems(data),source);})
+        .catch(function(){var grid=document.getElementById('directoryGrid');if(grid)grid.innerHTML='<div class="directory-empty">Could not load this channel list. Please refresh the page.</div>';});
+    }
+
+    window.addEventListener('hashchange', function(){
+      var mode=directoryMode();
+      if(mode){loadDirectory(mode);}
+      else{window.location.reload();}
+    });
+
     document.addEventListener('DOMContentLoaded', function () {
       initPopupButtons();
 
@@ -1338,6 +1466,8 @@ var popupClosing = false;
       initShareButton();
       initFullscreenHandler();
       applyRandomHeartColor();
+      var directory=directoryMode();
+      if(directory){ loadDirectory(directory); return; }
       loadStream(resolveCandidates());
     });
   </script>
