@@ -1,6 +1,6 @@
-"last_updated": "08-11-26 12.05",
-  "updated": "Manually Updated"
 {
+  "last_updated": "08-11-26 12.05",
+  "updated": "Manually Updated",
   "iframes": [
     {
       "id": "sony3",
@@ -18,7 +18,7 @@
       "logourl": "",
       "updated_at": "2026-11-07T02:31:13.401Z"
     },
-     {
+    {
       "id": "sony2",
       "name": "Sony sports 2 ",
       "iframeSrc": "https://crickcast-star1.pages.dev/?id=STEN1",
@@ -58,7 +58,7 @@
       "logourl": "",
       "updated_at": "2026-10-28T08:11:08.751Z"
     },
-     {
+    {
       "id": "Star1h",
       "name": "Star Sports Hindi 1",
       "iframeSrc": "https://crickcast-star1.pages.dev/?id=H1HD",
@@ -66,7 +66,7 @@
       "logourl": "",
       "updated_at": "2026-11-07T12:12:55.209Z"
     },
-     {
+    {
       "id": "Star2h",
       "name": "Star Sports Hindi 2",
       "iframeSrc": "https://crickcast-star1.pages.dev/?id=H2HD",
@@ -74,7 +74,7 @@
       "logourl": "",
       "updated_at": "2026-11-07T12:12:55.209Z"
     },
-     {
+    {
       "id": "star1e",
       "name": "Star Sports English 1 ",
       "iframeSrc": "https://crickcast-star1.pages.dev/?id=E1HD",
@@ -98,7 +98,6 @@
       "logourl": "",
       "updated_at": "2026-11-06T05:40:50.739Z"
     },
-   
     {
       "id": "Willow",
       "name": "Willow  Cricbuzz WW ",
@@ -363,6 +362,5 @@
       "logourl": "",
       "updated_at": "2026-11-06T23:06:49.510Z"
     }
-  ],
-  
+  ]
 }
