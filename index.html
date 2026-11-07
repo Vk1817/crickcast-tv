@@ -1069,28 +1069,42 @@ var popupClosing = false;
 
     function getStreamItems(data) {
       if (!data) return [];
-      if (Array.isArray(data.iframes)) return data.iframes;
-      if (data.data && Array.isArray(data.data.iframes)) return data.data.iframes;
-      if (data.streams && Array.isArray(data.streams)) return data.streams;
-      if (data.data && Array.isArray(data.data)) return data.data;
-      if (Array.isArray(data)) return data;
-
-      // Also support JSON files that wrap stream records inside nested objects.
       var items = [];
-      var visited = [];
-      function walk(value) {
-        if (!value || typeof value !== 'object' || visited.indexOf(value) !== -1) return;
-        visited.push(value);
+      var seen = [];
+      var idKeys = ['id','streamId','stream_id','matchId','match_id','channelId','channel_id','key'];
+      var urlKeys = ['iframeSrc','iframe_src','iframe','src','url','link','streamUrl','stream_url','embedUrl','embed_url','source','file'];
+      var nameKeys = ['name','title','channelName','channel_name','label'];
+      function firstValue(obj, keys) {
+        for (var i=0;i<keys.length;i++) if (obj[keys[i]] !== undefined && obj[keys[i]] !== null && obj[keys[i]] !== '') return obj[keys[i]];
+        return undefined;
+      }
+      function addRecord(obj, inheritedId) {
+        if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return;
+        var id = firstValue(obj,idKeys);
+        if ((id === undefined || id === null || id === '') && inheritedId !== undefined) id = inheritedId;
+        var url = firstValue(obj,urlKeys);
+        if (id !== undefined && id !== null && String(id).trim() !== '' && typeof url === 'string' && url.trim()) {
+          var sig = String(id)+'|'+url;
+          if (seen.indexOf(sig) === -1) { seen.push(sig); items.push(Object.assign({},obj,{id:String(id),iframeSrc:url})); }
+        }
+      }
+      function walk(value, inheritedId, depth) {
+        if (!value || typeof value !== 'object' || depth > 14) return;
         if (Array.isArray(value)) {
-          value.forEach(walk);
+          value.forEach(function(v){ walk(v,undefined,depth+1); });
           return;
         }
-        var hasId = value.id !== undefined || value.streamId !== undefined || value.stream_id !== undefined;
-        var hasUrl = value.iframeSrc || value.iframe || value.src || value.url || value.link;
-        if (hasId && hasUrl) items.push(value);
-        Object.keys(value).forEach(function (key) { walk(value[key]); });
+        addRecord(value,inheritedId);
+        Object.keys(value).forEach(function(key){
+          var child=value[key];
+          // Some feeds use the match ID as the object key and store a URL or record as its value.
+          if (child && typeof child === 'object') walk(child, key, depth+1);
+          else if (typeof child === 'string' && /^(https?:)?\/\//i.test(child.trim())) {
+            addRecord({id:inheritedId!==undefined?inheritedId:key,iframeSrc:child,name:key},undefined);
+          }
+        });
       }
-      walk(data);
+      walk(data,undefined,0);
       return items;
     }
 
@@ -1115,7 +1129,7 @@ var popupClosing = false;
 
     function getStreamFrameUrl(item) {
       if (!item) return '';
-      return item.iframeSrc || item.iframe || item.src || item.url || item.link || '';
+      return item.iframeSrc || item.iframe_src || item.iframe || item.src || item.url || item.link || item.streamUrl || item.stream_url || item.embedUrl || item.embed_url || item.source || item.file || '';
     }
 
     function loadStream(candidates) {
@@ -1399,10 +1413,10 @@ var popupClosing = false;
       heading.textContent=source==='backup'?'Backup Channels':'All Channels';
       sub.textContent=source==='backup'?'Channels loaded from the backup JSON source.':'Channels loaded from the primary JSON source.';
       var rows=items.map(function(item){
-        var id=item.id!==undefined?item.id:(item.streamId!==undefined?item.streamId:item.stream_id);
+        var id=item.id!==undefined?item.id:(item.streamId!==undefined?item.streamId:(item.stream_id!==undefined?item.stream_id:(item.matchId!==undefined?item.matchId:(item.match_id!==undefined?item.match_id:(item.channelId!==undefined?item.channelId:item.channel_id)))));
         var url=getStreamFrameUrl(item);
         if(id===undefined||id===null)return null;
-        return {id:String(id),name:String(item.name||item.title||item.channelName||('Channel '+id)),url:url};
+        return {id:String(id),name:String(item.name||item.title||item.channelName||item.channel_name||item.label||('Channel '+id)),url:url};
       }).filter(Boolean);
       count.textContent=rows.length+' channels';
       function draw(term){
@@ -1430,8 +1444,19 @@ var popupClosing = false;
       var heading=document.getElementById('directoryHeading');
       if(heading)heading.textContent=source==='backup'?'Backup Channels':'All Channels';
       var url=source==='backup'?BACKUP_DATA_SOURCE_URL:DATA_SOURCE_URL;
-      fetchDataOnce(url).then(function(data){renderDirectory(getStreamItems(data),source);})
-        .catch(function(){var grid=document.getElementById('directoryGrid');if(grid)grid.innerHTML='<div class="directory-empty">Could not load this channel list. Please refresh the page.</div>';});
+      fetchDataOnce(url).then(function(data){
+        var records=getStreamItems(data);
+        if(source==='primary' && !records.length){
+          return fetchDataOnce(BACKUP_DATA_SOURCE_URL).then(function(backup){
+            var backupRecords=getStreamItems(backup);
+            renderDirectory(backupRecords,'primary');
+            var note=document.getElementById('directorySub');
+            if(note)note.textContent=backupRecords.length?'Primary JSON had no recognizable channel records; showing backup data instead.':'No channel records were recognized in either JSON source.';
+          });
+        }
+        renderDirectory(records,source);
+        if(!records.length){var grid=document.getElementById('directoryGrid');if(grid)grid.innerHTML='<div class="directory-empty">JSON loaded, but no channel records with a match ID and stream URL were recognized. Check the JSON field names.</div>';}
+      }).catch(function(){var grid=document.getElementById('directoryGrid');if(grid)grid.innerHTML='<div class="directory-empty">Could not load this channel list. Please check the JSON URL and try again.</div>';});
     }
 
     window.addEventListener('hashchange', function(){
