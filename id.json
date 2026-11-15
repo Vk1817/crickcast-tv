@@ -44,7 +44,7 @@
     },
     {
       "id": "Kannada",
-      "name": "Star Sports Hindi ",
+      "name": "Sony sports Kanada ",
       "iframeSrc": "https://crickcast-star1.pages.dev/?id=STENK",
       "category": "Cricket",
       "logourl": "",
@@ -90,6 +90,31 @@
       "logourl": "",
       "updated_at": "2026-11-07T12:12:55.209Z"
     },
+     {
+      "id": "starkhel",
+      "name": "Star Sports Khel ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=SSK",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:12:55.209Z"
+    },
+   {
+      "id": "starsel1",
+      "name": "Star Sports select1 ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=ST1HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:12:55.209Z"
+    },
+   {
+      "id": "starsel2",
+      "name": "Star Sports select 2 ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=ST2HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:12:55.209Z"
+    },
+  
     {
       "id": "Willow-2",
       "name": "Willow-2- Extra Cricket Backup, Never Miss A Ball",
