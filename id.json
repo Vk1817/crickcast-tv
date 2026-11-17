@@ -98,6 +98,30 @@
       "logourl": "",
       "updated_at": "2026-11-07T12:12:55.209Z"
     },
+    {
+      "id": "Tamil1",
+      "name": "Star Sports Tamil ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=TL1HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-03T16:02:51.495Z"
+    },
+    {
+      "id": "Telugu1",
+      "name": "Star Sports Telugu ",
+      "iframeSrc": "http://crickcast-star1.pages.dev/?id=TU1HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-03T16:03:05.992Z"
+    },
+    {
+      "id": "Kannada1",
+      "name": "Star Sports Kannada ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=KA1SD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
    {
       "id": "starsel1",
       "name": "Star Sports select1 ",
