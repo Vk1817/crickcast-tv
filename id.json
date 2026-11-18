@@ -106,6 +106,14 @@
       "logourl": "",
       "updated_at": "2026-11-03T16:02:51.495Z"
     },
+     {
+      "id": "all",
+      "name": "All device support",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/channel/all",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
     {
       "id": "Telugu1",
       "name": "Star Sports Telugu ",
