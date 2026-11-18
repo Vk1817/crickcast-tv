@@ -130,6 +130,46 @@
       "logourl": "",
       "updated_at": "2026-10-28T08:11:08.751Z"
     },
+     {
+      "id": "s1",
+      "name": "Sony Sports 1 ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S1",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "s3",
+      "name": "Sony Sports 3 ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S3",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+     {
+      "id": "s4hd",
+      "name": "Sony Sports Tamil ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S4T",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+     {
+      "id": "s4",
+      "name": "Sony Sports Telugu ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S4t",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+     {
+      "id": "s4k",
+      "name": "Sony Sports Kanadda ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S4K",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
    {
       "id": "starsel1",
       "name": "Star Sports select1 ",
