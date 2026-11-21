@@ -234,9 +234,9 @@
       "updated_at": "2026-11-06T08:09:12.065Z"
     },
     {
-      "id": "Cricbuzz-2",
-      "name": "Cricbuzz-2 - Backup Cricket Stream, Smooth Playback",
-      "iframeSrc": "https://matchdekho.pages.dev/player/drm?url=https://d1ifzl5cnhi7bu.cloudfront.net/out/v1/45ba30e075ad455a8767d3f33e67ea3d/index.mpd&keys=0ae4f162eec3e6f2b580a5bf0f4a64d4:03483335db81cba5bbcf51b6d31196d9",
+      "id": "euro",
+      "name": "Euro Sports - Australia vs England",
+      "iframeSrc": "https://sportlink-json.pages.dev/drm?url=https://wbd.skandha.tv/EuroSport_HD/EuroSport_HD.isml/.mpd|drmScheme=clearkey&drmLicense=12ed56d780abcfebcd23aa27e4ac5015:6784567890abcfebcd23aa27e4ac2814",
       "category": "Cricket",
       "logourl": "",
       "updated_at": "2026-10-22T06:08:03.054Z"
