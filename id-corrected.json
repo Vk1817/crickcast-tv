@@ -1,0 +1,468 @@
+{
+  "last_updated": "15-11-26 06.44",
+  "updated": "Manually Updated",
+  "iframes": [
+    {
+      "id": "sony3",
+      "name": "Sony Sports 3",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=STEN3",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T02:31:05.861Z"
+    },
+    {
+      "id": "sony1",
+      "name": "Sony sports 1 ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=STEN1",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T02:31:13.401Z"
+    },
+    {
+      "id": "sony2",
+      "name": "Sony sports 2 ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=STEN2",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T02:31:13.401Z"
+    },
+    {
+      "id": "Tamil",
+      "name": "Tamil -  Sony Liv Tamil",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=STENT",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-03T16:02:51.495Z"
+    },
+    {
+      "id": "Telugu",
+      "name": "Telugu - Sony Liv Telugu ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=STENTU",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-03T16:03:05.992Z"
+    },
+    {
+      "id": "Kannada",
+      "name": "Sony sports Kanada ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=STENK",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "sony5",
+      "name": "Sony Sports 5",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=STEN5",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "Star1h",
+      "name": "Star Sports Hindi 1",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=H1HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:12:55.209Z"
+    },
+    {
+      "id": "Star2h",
+      "name": "Star Sports Hindi 2",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=H2HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:12:55.209Z"
+    },
+    {
+      "id": "star1e",
+      "name": "Star Sports English 1 ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=E1HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:12:55.209Z"
+    },
+    {
+      "id": "star2e",
+      "name": "Star Sports English 2 ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=E2HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:12:55.209Z"
+    },
+    {
+      "id": "starkhel",
+      "name": "Star Sports Khel ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=SSK",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:12:55.209Z"
+    },
+    {
+      "id": "Tamil1",
+      "name": "Star Sports Tamil ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=TL1HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-03T16:02:51.495Z"
+    },
+    {
+      "id": "all",
+      "name": "All device support",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/player/plyrr/?url=https://live.msnetworks.net/a-sports/master.m3u8",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "Telugu1",
+      "name": "Star Sports Telugu ",
+      "iframeSrc": "http://crickcast-star1.pages.dev/?id=TU1HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-03T16:03:05.992Z"
+    },
+    {
+      "id": "Kannada1",
+      "name": "Star Sports Kannada ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=KA1SD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "s1",
+      "name": "Sony Sports 1 ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S1",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "s3",
+      "name": "Sony Sports 3 ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S3",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "s4hd",
+      "name": "Sony Sports Tamil ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S4T",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "s4",
+      "name": "Sony Sports Telugu ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S4t",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "s4k",
+      "name": "Sony Sports Kanadda ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S4K",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "starsel1",
+      "name": "Star Sports select1 ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=ST1HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:12:55.209Z"
+    },
+    {
+      "id": "starsel2",
+      "name": "Star Sports select 2 ",
+      "iframeSrc": "https://crickcast-star1.pages.dev/?id=ST2HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:12:55.209Z"
+    },
+    {
+      "id": "veto",
+      "name": "veto ios",
+      "iframeSrc": "https://mbgthz-veto.akamaized.net/f98c8ae68a354ab59a4e28e3dd700d4f/playlist.m3u8",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T02:31:13.401Z"
+    },
+    {
+      "id": "ps2",
+      "name": "PREMIER SPORTS 2",
+      "type": "iframe",
+      "iframeSrc": "https://sportlink-json.pages.dev/drm?url=https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/bcj3iscpd6/out/v1/fcd137b391214f7cb99dd4d7be90ca87/cenc.mpd&keys=1a5df53609ebc9857898c490f4724918:77f62980d582ec541280796acf8b2d19"
+    },
+    {
+      "id": "Tensports",
+      "name": "Tensports  ",
+      "iframeSrc": "https://live.msnetworks.net/ten-sports/master.m3u8",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
+      "id": "willow",
+      "name": "Willow Cricbuzz",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/channel/willow",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-03T16:03:34.113Z"
+    },
+    {
+      "id": "Willowios",
+      "name": "Willow Sports Ios",
+      "iframeSrc": "https://amg01269-amg01269c1-sportstribal-emea-5204.playouts.now.amagi.tv/ts-eu-w1-n2/playlist/amg01269-willowtvfast-willowplus-sportstribalemea/playlist.m3u8",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-06T23:06:18.254Z"
+    },
+    {
+      "id": "Willow3",
+      "name": "Willow-3 - Backup Stream, Never Miss A Ball",
+      "iframeSrc": "https://sportlink10-ajp.pages.dev/w?id=B0HPSPDN9D",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-06T08:09:12.065Z"
+    },
+    {
+      "id": "euro",
+      "name": "Euro Sports - Australia vs England",
+      "iframeSrc": "https://sportlink-json.pages.dev/drm?url=https://wbd.skandha.tv/EuroSport_HD/EuroSport_HD.isml/.mpd|drmScheme=clearkey&drmLicense=12ed56d780abcfebcd23aa27e4ac5015:6784567890abcfebcd23aa27e4ac2814",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-22T06:08:03.054Z"
+    },
+    {
+      "id": "tnt1",
+      "name": "TNT Sports - Australia vs England",
+      "iframeSrc": "https://sportlink-json.pages.dev/drm?url=https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd&keys=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-06T08:09:18.791Z"
+    },
+    {
+      "id": "ios1",
+      "name": "Ios- Australia vs England",
+      "iframeSrc": "https://sportlink-json.pages.dev/ios?url=https://live.msnetworks.net/ten-sports/master.m3u8",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-24T03:47:45.997Z"
+    },
+    {
+      "id": "TNT",
+      "name": "TNT -  TNT Sports 1 ",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/channel/tnt",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-31T21:44:21.669Z"
+    },
+    {
+      "id": "ios2",
+      "name": "All - One Stream, All Matches, Live Scores",
+      "iframeSrc": "https://sportlink-json.pages.dev/ios?url=https://cdn-gstyx.styxsports.live/STYX/streams/EZHBcKtVwypR7iTn6126336024746.m3u8",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-06T05:35:23.706Z"
+    },
+    {
+      "id": "VETO",
+      "name": "VETO - Veto OTT, Live Sports Action",
+      "iframeSrc": "https://india-vs-nz.pages.dev/player/PR/?url=https://qwrvdz-veto.akamaized.net/f98c8ae68a354ab59a4e28e3dd700d4f/playlist.m3u8?session_id=aefd63ba-f810-4b5b-b88b-1cd135206342-1793260264960&device_id=ad9f1602bb8504ff",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-29T08:05:16.190Z"
+    },
+    {
+      "id": "IOS",
+      "name": "IOS - iPhone And iPad Friendly, Smooth Playback",
+      "iframeSrc": "https://india-vs-nz.pages.dev/player/PR/?url=https://live.msnetworks.net/a-sports/master.m3u8",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-07T12:14:41.689Z"
+    },
+    {
+      "id": "fox",
+      "name": "Fox - Multi Quality HD, Works On All Devices",
+      "iframeSrc": "https://crickcast-test.pages.dev/fox",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-03T16:05:47.966Z"
+    },
+    {
+      "id": "FC",
+      "name": "FC - Fancode India, Full HD HLS Stream",
+      "iframeSrc": "https://sportlink-json.pages.dev/drm?url=https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/avqlywnuzx/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd&keys=1994b1df7dfd2e8a8d7b9bf3fb900285:22a1444b3da18e139191665b3d652835",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-06T08:10:44.691Z"
+    },
+    {
+      "id": "FC2",
+      "name": "FB 1 - Football Stream  ( real Madrid &  Manchester United)",
+      "iframeSrc": "https://in-mc-flive.fancode.com/mumbai/4250640_english_hls_531bf4661e7063_1ta-di_h264/1080p.m3u8?hdntl=Expires=1794628546~_GO=Generated~acl=/mumbai/4250640_english_hls_531bf4661e7063_1ta-di_h264/*~SessionID=330387595_fc-web_e17f533d-0cb8-4f~Signature=AbO9BjhOYLd1GmMfhOhHHklnPOfhTKBOpq8RY94K5cvEs32zsfobefwN_2FtsFC-VmxLp67-63kmnIeMKq08MmKZpgcO",
+      "category": "Football",
+      "logourl": "",
+      "updated_at": "2026-10-31T09:23:45.418Z"
+    },
+    {
+      "id": "SELECT",
+      "name": "SELECT - Star Sports Select, Premium Sports 24X7",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/star?id=SE1HD",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-21T21:29:06.012Z"
+    },
+    {
+      "id": "U8ENG",
+      "name": "U8ENG - Unite8 Sports English, World Class Coverage",
+      "iframeSrc": "https://matchdekho.pages.dev/player/drm?url=https://d2o8pibksxtln6.cloudfront.net/live/media/Unite8_Sports_2_HD/dash/Unite8_Sports_2_HD.mpd&keys=df9392d2092f42079e7d860d8101a790:8a06ae92b631e30b61c03c96fa45b990",
+      "category": "Football",
+      "logourl": "",
+      "updated_at": "2026-10-18T09:00:31.000Z"
+    },
+    {
+      "id": "SLiV1",
+      "name": "SLiV1 - Sony Liv 1, Live Action",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/star.html?id=STEN1",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-21T21:29:54.801Z"
+    },
+    {
+      "id": "U8HINDI",
+      "name": "U8HINDI - Unite8 Sports Hindi, Feel Every Match",
+      "iframeSrc": "https://matchdekho.pages.dev/player/drm?url=https://d2o8pibksxtln6.cloudfront.net/live/media/Unite8_Sports_1_HD/dash/Unite8_Sports_1_HD.mpd&keys=b23ff5731d06447ab7be814f67d3b38b:84e706fc0f55394eb92147087bd5def7",
+      "category": "Football",
+      "logourl": "",
+      "updated_at": "2026-10-18T09:00:30.000Z"
+    },
+    {
+      "id": "SLiV2",
+      "name": "SLiV2 - English Broadcast, Live All Year Round",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/star.html?id=STEN2",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-03T16:06:34.745Z"
+    },
+    {
+      "id": "YT-ENG",
+      "name": "YT-ENG - YouTube Live, English Commentary",
+      "iframeSrc": "https://www.youtube.com/embed/wsysXETXWxA?autoplay=0",
+      "category": "Football",
+      "logourl": "",
+      "updated_at": "2026-10-18T09:00:33.000Z"
+    },
+    {
+      "id": "SLiV3",
+      "name": "SLiV3 - Hindi Broadcast, Live All Year Round",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/star.html?id=STEN3",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-21T21:30:42.636Z"
+    },
+    {
+      "id": "S1",
+      "name": "S1 - Sony Sports 1 HD, English Live",
+      "iframeSrc": "https://india-vs-nz.pages.dev/player/PR/?url=https://stream-through-spark.lovable.app/api/proxy?u=https://dishmt.slivcdn.com/hls/live/2011747/TEN1HD/master.m3u8?hdnea=exp=1793964786~acl=/*~id=72517255879295503561290104497450~hmac=c9c0212c51f57922343a6f5ebc7c4814d9123d2d39bc02b7cae00f9cf8b99341",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-06T05:04:29.722Z"
+    },
+    {
+      "id": "S2",
+      "name": "All Devices - English",
+      "iframeSrc": "https://india-vs-nz.pages.dev/player/PR/?url=",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-04T02:15:25.324Z"
+    },
+    {
+      "id": "SLiV5",
+      "name": "SLiV5 - Sony Liv English 5, Live Action",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/star.html?id=STEN5",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-21T21:30:34.798Z"
+    },
+    {
+      "id": "S3",
+      "name": "All Devices - Hindi",
+      "iframeSrc": "https://india-vs-nz.pages.dev/player/PR/?url=https://stream-through-spark.lovable.app/api/proxy?u=https://dishmt.slivcdn.com/hls/live/2020591/TEN3HD/master.m3u8?hdnea=exp=1794049291~acl=/*~id=78005759354114309045978138696727~hmac=a9c9f79de5f85e7851aefe20ac0d8c3d7c2d2ce1e07932d1578661ff4d552e09",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-06T23:05:08.104Z"
+    },
+    {
+      "id": "S4",
+      "name": "Sony Liv  Tamil",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/star.html?id=STENT",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-29T23:50:46.953Z"
+    },
+    {
+      "id": "S4X",
+      "name": "Sony Liv Telugu",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/star.html?id=STENTU",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-29T23:50:37.246Z"
+    },
+    {
+      "id": "RRSHOW",
+      "name": "RRSHOW - Rohit Sharma Show, Backup Stream",
+      "iframeSrc": "https://sonucdn-v4.pages.dev/star.html?id=SETHD",
+      "category": "Entertainment",
+      "logourl": "",
+      "updated_at": "2026-10-18T09:00:57.000Z"
+    },
+    {
+      "id": "S5",
+      "name": "S5 - Sony Liv 5, English Premium Coverage",
+      "iframeSrc": "https://india-vs-nz.pages.dev/player/PR/?url=https://stream-through-spark.lovable.app/api/proxy?u=https://dishmt.slivcdn.com/hls/live/2020594/SONYSIXSD/master.m3u8?hdnea=exp=1794049291~acl=/*~id=78005759354114309045978138696727~hmac=a9c9f79de5f85e7851aefe20ac0d8c3d7c2d2ce1e07932d1578661ff4d552e09",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-06T23:06:18.254Z"
+    },
+    {
+      "id": "BANG",
+      "name": "BANG - Soby Sports Bangla, Football Live",
+      "iframeSrc": "https://sonucdn-v5.pages.dev/football/x.html",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-21T21:30:57.460Z"
+    },
+    {
+      "id": "tnt3",
+      "name": "TNT Sports 3 ILT20 Live",
+      "iframeSrc": "https://sportlink-json.pages.dev/drm?url=https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/dev1hjwzh9/out/v1/a5f0ee7ad7b24906b14f43bebbbe4678/cenc.mpd&keys=cc91508324ce9dcaf425a43d58f1d9d4:643e5474d9edd87c7d9091c8c97994ca",
+      "category": "Entertainment",
+      "logourl": "",
+      "updated_at": "2026-10-18T09:00:58.000Z"
+    },
+    {
+      "id": "u1",
+      "name": "Unite Sports ILT20 Hindi Stream ",
+      "iframeSrc": "https://sportlink-json.pages.dev/U1",
+      "category": "cricket",
+      "logourl": "",
+      "updated_at": "2026-10-30T06:35:34.828Z"
+    },
+    {
+      "id": "zest",
+      "name": "zest ILT20 Match",
+      "iframeSrc": "https://sportlink-json.pages.dev/zest",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-11-06T05:41:23.893Z"
+    }
+  ]
+}
