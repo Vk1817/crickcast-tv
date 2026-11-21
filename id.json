@@ -249,15 +249,7 @@
       "logourl": "",
       "updated_at": "2026-11-06T08:09:18.791Z"
     },
-    {
-      "id": "FOX",
-      "name": "FOX - International Sports, Live And Exclusive",
-      "iframeSrc": "https://matchdekho.pages.dev/player/drm?url=https://otte.live.fly.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/eqcckaz1wd/out/v1/8a5302d40f3f441484982201ab51a086/cenc.mpd&keys=01d12ab22d76cfd1129767a3fa6374e9:68d6f01365a1e6e6a14176bfd2760817",
-      "category": "Cricket",
-      "logourl": "",
-      "updated_at": "2026-10-18T09:00:17.000Z"
-    },
-    {
+        {
       "id": "ios1",
       "name": "Ios- Australia vs England",
       "iframeSrc": "https://sportlink-json.pages.dev/ios?url=https://live.msnetworks.net/ten-sports/master.m3u8",
