@@ -308,7 +308,7 @@
     {
       "id": "FC",
       "name": "FC - Fancode India, Full HD HLS Stream",
-      "iframeSrc": "https://sonucdn-v5.pages.dev/channel/tnt",
+      "iframeSrc": "https://sportlink-json.pages.dev/drm?url=https://otte.cache.aiv-cdn.net/iad-nitro/live/clients/dash/enc/avqlywnuzx/out/v1/aefca6420f944a9482e117f315de535f/cenc.mpd&keys=1994b1df7dfd2e8a8d7b9bf3fb900285:22a1444b3da18e139191665b3d652835",
       "category": "Cricket",
       "logourl": "",
       "updated_at": "2026-11-06T08:10:44.691Z"
