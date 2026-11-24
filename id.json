@@ -321,9 +321,9 @@
       "updated_at": "2026-10-31T09:23:45.418Z"
     },
     {
-      "id": "SELECT",
-      "name": "SELECT - Star Sports Select, Premium Sports 24X7",
-      "iframeSrc": "https://sonucdn-v5.pages.dev/star?id=SE1HD",
+      "id": "highlights",
+      "name": "Highlights India vs UAE",
+      "iframeSrc": "https://sportlink-json.pages.dev/ios?url=https://sportlink-ambani.lovable.app/api/proxy?u=https://dish.sonyliv.com/HLS/36a19302f58643de883495986bc257b0/1795526060/baseline-std-v4/ACC_RISING_STARS_2026_M7_IND_VS_UAE_HLS_eng_baseline-800300010.m3u8?hdnea=exp=1795570701~acl=/*~id=83a25beee1317224-2409101008199738627~hmac=402889b68ed38ced12458cf825a157aa29263e5a4c33210846c1515dd74337c7",
       "category": "Cricket",
       "logourl": "",
       "updated_at": "2026-10-21T21:29:06.012Z"
