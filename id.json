@@ -249,6 +249,14 @@
       "updated_at": "2026-11-06T08:09:18.791Z"
     },
     {
+      "id": "sky1",
+      "name": "sky sports NZ Australia vs England",
+      "iframeSrc": "https://crickcast-test.pages.dev/sky1",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-29T23:50:37.246Z"
+    },
+    {
       "id": "ios1",
       "name": "Ios- Australia vs England",
       "iframeSrc": "https://tvsen5.aynaott.com/asdfadsf/index.m3u8",
@@ -408,14 +416,7 @@
       "logourl": "",
       "updated_at": "2026-10-29T23:50:46.953Z"
     },
-    {
-      "id": "S4X",
-      "name": "Sony Liv Telugu",
-      "iframeSrc": "https://sonucdn-v5.pages.dev/star.html?id=STENTU",
-      "category": "Cricket",
-      "logourl": "",
-      "updated_at": "2026-10-29T23:50:37.246Z"
-    },
+  
     {
       "id": "tsn5",
       "name": "TSN 5",
