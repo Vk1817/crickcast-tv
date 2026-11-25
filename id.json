@@ -139,6 +139,14 @@
       "updated_at": "2026-10-28T08:11:08.751Z"
     },
     {
+      "id": "s2",
+      "name": "Sony Sports 3 ios",
+      "iframeSrc": "https://sportlink-json.pages.dev/S2",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
+    },
+    {
       "id": "s3",
       "name": "Sony Sports 3 ios",
       "iframeSrc": "https://sportlink-json.pages.dev/S3",
@@ -215,6 +223,14 @@
       "category": "Cricket",
       "logourl": "",
       "updated_at": "2026-11-03T16:03:34.113Z"
+    },
+    {
+      "id": "tnt4",
+      "name": "TNT 4",
+      "iframeSrc": "https://sportlink-json.pages.dev/drm?url=https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/tdijwiga2k/out/v1/f5fde318678f4f7583bf27b7231bde1f/cenc.mpd&keys=fa34fa8c90336dd528c7a23871cad1fe:552a78d1aeb74f1650d68255c5749408",
+      "category": "Cricket",
+      "logourl": "",
+      "updated_at": "2026-10-28T08:11:08.751Z"
     },
     {
       "id": "Willowios",
