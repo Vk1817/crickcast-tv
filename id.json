@@ -250,8 +250,8 @@
     },
     {
       "id": "sky1",
-      "name": "sky sports NZ Australia vs England",
-      "iframeSrc": "https://crickcast-test.pages.dev/sky1",
+      "name": "sky sports NZ",
+      "iframeSrc": "https://sportlink-json.pages.dev/skycricket",
       "category": "Cricket",
       "logourl": "",
       "updated_at": "2026-10-29T23:50:37.246Z"
