@@ -258,7 +258,7 @@
     },
     {
       "id": "tnt1",
-      "name": "TNT Sports - Australia vs England",
+      "name": "TNT Sports",
       "iframeSrc": "https://sportlink-json.pages.dev/drm?url=https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/rhf2dwosdt/out/v1/ee550d2a68d846c797e6ce4de2e8b76d/cenc.mpd&keys=69a5aa835a061ce64a630d1046727e40:d02feac8a999bd06bf4059bf33411749",
       "category": "Cricket",
       "logourl": "",
@@ -291,7 +291,7 @@
     {
       "id": "TNT",
       "name": "TNT -  TNT Sports 1 ",
-      "iframeSrc": "https://sonucdn-v5.pages.dev/channel/tnt",
+      "iframeSrc": "https://sportlink-json.pages.dev/tnt1",
       "category": "Cricket",
       "logourl": "",
       "updated_at": "2026-10-31T21:44:21.669Z"
