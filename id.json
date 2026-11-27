@@ -283,7 +283,7 @@
     {
       "id": "ios1",
       "name": "Ios- Australia vs England",
-      "iframeSrc": "https://in-mc-vod.fancode.com/mumbai/4250645_english_hls_388d64605956269_1ta-di_h264/index.m3u8",
+      "iframeSrc": "https://sportlink-json.pages.dev/IOS2?url=https://in-mc-vod.fancode.com/mumbai/4250645_english_hls_388d64605956269_1ta-di_h264/index.m3u8",
       "category": "Cricket",
       "logourl": "",
       "updated_at": "2026-10-24T03:47:45.997Z"
